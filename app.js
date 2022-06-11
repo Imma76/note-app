@@ -1,11 +1,15 @@
-import 'express-async-errors'
-import express from 'express'
-import middleware from './middlewares/middleware.js'
-const app = express()
+import 'express-async-errors';
 
-middleware(app)
+import express from 'express';
 
-const PORT = process.env.PORT || 5011
+import middleware from './middlewares/middleware.js';
+
+const app = express();
+
+middleware(app);
+
+const PORT = process.env.PORT || 5011;
+
 app.listen(PORT, () => {
-    console.log('port listening on port 5011')
-})
+  console.log('port listening on port 5011');
+});

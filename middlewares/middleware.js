@@ -1,9 +1,10 @@
-import express from 'express'
-import database from '../config/db.config.js'
-const middleware = (app) => {
-    app.use(express.json())
-    app.use(express.urlencoded({ extended: true }))
-    database();
-}
+import express from 'express';
+import database from '../config/db.config.js';
 
-export default middleware
+const middleware = (app) => {
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: true }));
+  database();
+};
+
+export default middleware;

@@ -1,7 +1,7 @@
-import express from 'express'
-import noteController from '../controllers/note.controller.js'
-const noteRouter = express.Router()
+import express from 'express';
+import noteController from '../controllers/note.controller.js';
 
-noteRouter.get('/all_notes')
+const noteRouter = express.Router();
 
-export default noteRouter
+noteRouter.get('/all_notes');
+export default noteRouter;

@@ -1,18 +1,19 @@
-class NoteController{
-    async getAllNotes() {
-        
+class NoteController {
+  async getAllNotes() {
 
-    }
-    async postNewNote() {
-        
-    }
+  }
 
-    async updateNote() {
-        
-    }
-    async deleteNote() {
-        
-    }
+  async postNewNote() {
+
+  }
+
+  async updateNote() {
+
+  }
+
+  async deleteNote() {
+
+  }
 }
 
-export default new NoteController()
+export default new NoteController();
