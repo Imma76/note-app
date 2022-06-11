@@ -7,5 +7,5 @@ const noteRouter = express.Router();
 
 noteRouter.get('/all_notes', noteController.getAllNotes);
 
-noteRouter.post('/new_note',  noteController.postNewNote);
+noteRouter.post('/new_note',[validator(noteValidator.validateNewNoteSchema)],  noteController.postNewNote);
 export default noteRouter;
