@@ -13,8 +13,10 @@ class NoteController {
     return res.status(201).send({ message: true, body: 'article posted successfully' });
   }
 
-  async updateNote() {
-
+  async updateNote(req, res) {
+    const data = { title: req.title, content: req.content,updatedAt: Date.now };
+    await noteService.updateNote(req.id, data);
+    return res.status(201).send({ message: true, body: 'note updated successfully' });
   }
 
   async deleteNote() {

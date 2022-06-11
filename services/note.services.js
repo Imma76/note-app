@@ -2,8 +2,9 @@ import notes from '../models/note.model.js';
 
 const getNotes = () => notes.find({});
 
-const updateNote = (id) => {
-  const update = notes.updateOne({});
+const updateNote = (id, data) => {
+  const update = notes.updateOne({ _id: id }, data, { runValidators: true });
+  return update;
 };
 
 const createNote = (note) => {
