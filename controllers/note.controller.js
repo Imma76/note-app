@@ -3,7 +3,7 @@ import noteService from '../services/note.services.js';
 
 class NoteController {
   async getAllNotes(req, res) {
-    const allNotes = noteService.getAllNotes();
+      const allNotes = await noteService.getNotes();
     return res.status(200).send({ message: true, body: allNotes });
   }
 
