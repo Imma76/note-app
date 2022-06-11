@@ -5,7 +5,7 @@ const app = express()
 
 middleware(app)
 
-
-app.listen(5011, () => {
+const PORT = process.env.PORT || 5011
+app.listen(PORT, () => {
     console.log('port listening on port 5011')
 })
