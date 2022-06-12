@@ -3,6 +3,8 @@ just before you get through the code
 this is me cooking beans with node js  and mongodb😈😈
 
 ![images](https://user-images.githubusercontent.com/70198597/173223568-e6952c8f-ef4a-4bf7-b748-f5ab59fc1842.jpeg)
+
+
 **TO START THE APP**🦵
 type "npm run dev" on your terminal
 
