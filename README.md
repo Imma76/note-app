@@ -6,6 +6,7 @@ this is me cooking beans with node js  and mongodb😈😈
 
 
 **TO START THE APP**🦵
+
 type "npm run dev" on your terminal
 
 **EXISTING ROUTES**
