@@ -16,6 +16,7 @@ const createNote = (note) => {
 
 const deleteNote = (id) => {
   const deletenote = notes.deleteOne({ _id: id });
+  return deletenote;
 };
 
 export default {

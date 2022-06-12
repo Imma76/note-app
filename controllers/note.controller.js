@@ -19,8 +19,10 @@ class NoteController {
     return res.status(201).send({ message: true, body: 'note updated successfully' });
   }
 
-  async deleteNote() {
-
+  async deleteNote(req, res) {
+    const deleted = await noteService.deleteNote(req.body.id);
+    console.log(deleted);
+    return res.status(200).send({ message: true, body: 'note deleted succesfully' });
   }
 }
 
