@@ -6,8 +6,8 @@ this is me cooking beans with node js  and mongodb😈😈
 
 
 **TO START THE APP**🦵
-
-type "npm run dev" on your terminal
+1. type "npm i" to install dependencies
+2. type "npm run dev" on your terminal
 
 **EXISTING ROUTES**
 1. notes/all_notes (fetched all the notes in the db)📜
