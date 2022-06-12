@@ -63,5 +63,14 @@ here we have
     
     1. that you cannot create a new note without tagging it to an existing category
     2. trying to create a new note with a category that does not exist in the list of categories will return error response
-    3. note category must be one of these 'sports⚽️', 'fashion🕺', 'nature☘️', 'religion📔', 'technology🛸'
+    3. note category must be one of these 
+    'sports⚽️',
+    
+    'fashion🕺',
+    
+    'nature☘️',
+    
+    'religion📔',
+    
+    'technology🛸'
     
