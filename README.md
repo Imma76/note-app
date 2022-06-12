@@ -9,6 +9,7 @@ here we have
 --controllers
     |
     |-- they take in data and perform various functions like handling note creation, note update,note deletion, get all notes and interact with services which in turn interact with mongo db
+    \n 
 -- services
     |
     |-- they receive data directly from controllers and interact with db to return the response of queries made to it
