@@ -57,7 +57,7 @@ here we have
     | -- holds the various middlwares used in the note app like error handling,connecting the app to db
     
     
-    **NOTE CATEGORIES******
+   **NOTE CATEGORIES**
     
     Note 
     
