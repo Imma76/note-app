@@ -4,6 +4,7 @@ const getNotes = () => notes.find({});
 
 const updateNote = (id, data) => {
   const update = notes.updateOne({ _id: id }, data, { runValidators: true });
+  console.log(Date.now);
   return update;
 };
 

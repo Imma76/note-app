@@ -15,12 +15,12 @@ const noteModel = mongoose.Schema({
     type: String
   },
   createdAt: {
-    default: Date.now,
-    type: Date
+    default: Date(),  type: Date
   },
 
   updatedAt: {
-    required: false
+    required: false,
+    
   }
 
 });
