@@ -57,4 +57,11 @@ here we have
     | -- holds the various middlwares used in the note app like error handling,connecting the app to db
     
     
+    **NOTE CATEGORIES******
+    
+    Note 
+    
+    1. that you cannot create a new note without tagging it to an existing category
+    2. trying to create a new note with a category that does not exist in the list of categories will return error response
+    3. note category must one of these 'sports⚽️', **'fashion🕺', 'nature☘️', 'religion📔', 'technology🛸'**
     
