@@ -1,7 +1,10 @@
 import mongoose from 'mongoose';
 
 const noteModel = mongoose.Schema({
-
+  category: {
+    required: true,
+    type: String
+  },
   title: {
 
     required: true,
