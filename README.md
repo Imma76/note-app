@@ -1,8 +1,16 @@
 # note-app
 just before you get through the code
-this is me cooking beans with node js express and mongodb
+this is me cooking beans with node js  and mongodb😈😈
 
 ![images](https://user-images.githubusercontent.com/70198597/173223568-e6952c8f-ef4a-4bf7-b748-f5ab59fc1842.jpeg)
+**TO START THE APP**🦵
+type "npm run dev" on your terminal
+
+**EXISTING ROUTES**
+1. notes/all_notes (fetched all the notes in the db)📜
+2. notes/new_note (creates a new note in db)✉️
+3. notes/update_note (updates a note in the db)
+4. notes/delete_note (delete a particular note by its id)
 
 the note app is explicitly split into different folders
 each to serve or perform  a particular function or use case
