@@ -2,6 +2,8 @@
 just before you get through the code
 this is me cooking beans with node js express and mongodb
 
+![images](https://user-images.githubusercontent.com/70198597/173223568-e6952c8f-ef4a-4bf7-b748-f5ab59fc1842.jpeg)
+
 the note app is explicitly split into different folders
 each to serve or perform  a particular function or use case
 here we have 
