@@ -9,5 +9,6 @@ noteRouter.get('/all_notes', noteController.getAllNotes);
 
 noteRouter.post('/new_note', [validator(noteValidator.validateNewNoteSchema)], noteController.postNewNote);
 
-noteRouter.put('/update_note',[validator(noteValidator.updateNoteSchema)],  noteController.updateNote);
+noteRouter.put('/update_note', [validator(noteValidator.updateNoteSchema)], noteController.updateNote);
+noteRouter.delete('/delete_note',[validator(noteValidator.updateNoteSchema)],  noteController.deleteNote);
 export default noteRouter;
