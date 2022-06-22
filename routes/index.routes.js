@@ -5,6 +5,6 @@ import userRouter from './user.route.js';
 const router = express.Router();
 
 router.use('/note-app', noteRouter);
-router.use('/note-user', userRouter);
+router.use('/note-app', userRouter);
 
 export default router;
