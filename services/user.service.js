@@ -6,4 +6,9 @@ class UserService {
     const newUser = await userModel.create(data);
     return newUser;
   }
+
+  async loginUser(data) {
+      const user = await userModel.findOne({ email: data.email });
+      return user;
+  }
 }
