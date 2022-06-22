@@ -12,3 +12,4 @@ class UserService {
       return user;
   }
 }
+export default new UserService();
