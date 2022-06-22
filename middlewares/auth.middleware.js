@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 import Jwt from 'jsonwebtoken';
 
 const authentication = (req, res, next) => {
