@@ -16,6 +16,9 @@ const noteModel = mongoose.Schema({
     required: true,
 
     type: String
+  },
+  email: {
+    type: String
   }
 
 }, { timestamps: true });
