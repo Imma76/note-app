@@ -11,7 +11,6 @@ class NoteValidator {
     id: Joi.string().required(),
     content: Joi.string(),
     title: Joi.string()
-
   });
 
   deleteNoteSchema = Joi.object({

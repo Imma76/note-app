@@ -18,7 +18,8 @@ const noteModel = mongoose.Schema({
     type: String
   },
   createdAt: {
-    default: Date(),  type: Date
+    default: Date(),
+    type: Date
   },
 
   updatedAt: {

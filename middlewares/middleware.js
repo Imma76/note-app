@@ -8,9 +8,7 @@ const middleware = (app) => {
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
   app.use(router);
-
   database();
-  app.use(noteRouter);
   app.use(errorHandler);
 };
 
