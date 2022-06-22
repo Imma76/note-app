@@ -8,8 +8,8 @@ class UserService {
   }
 
   async loginUser(data) {
-      const user = await userModel.findOne({ email: data.email });
-      return user;
+    const user = await userModel.findOne({ email: data.email });
+    return user;
   }
 }
 export default new UserService();
