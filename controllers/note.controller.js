@@ -2,7 +2,6 @@
 import _ from 'lodash';
 import pino from 'pino';
 import noteService from '../services/note.services.js';
-import noteCategory from '../utils/utils.js';
 
 const logger = pino();
 class NoteController {
@@ -18,11 +17,7 @@ class NoteController {
   }
 
   async postNewNote(req, res) {
-    // if (!noteCategory.includes(req.body.category)) {
-    //   return res.status(400).send({ message: false, 
-    //body: `category must be among ${noteCategory} `
- // });
-    // }
+  
     const data = {
       title: req.body.title,
       content: req.body.content,
