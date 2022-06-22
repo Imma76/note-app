@@ -16,18 +16,9 @@ const noteModel = mongoose.Schema({
     required: true,
 
     type: String
-  },
-  createdAt: {
-    default: Date(),
-    type: Date
-  },
-
-  updatedAt: {
-    required: false,
-    
   }
 
-});
+}, { timestamps: true });
 
 const notes = mongoose.model('notes', noteModel);
 
