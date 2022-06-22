@@ -15,7 +15,7 @@ class UserController {
     if (_.isEmpty(user)) {
       return res.status(404).send({ success: false, body: 'user does not exist' });
     }
-    const token = jwt.sign({ user }, process.env.API_SECRET);
+    const token = jwt.sign({ user }, process.env.TOKEN_SECRET);
     return res.status(200).send({
       success: true,
       body: {
