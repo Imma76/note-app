@@ -16,7 +16,9 @@ class NoteController {
     if (!noteCategory.includes(req.body.category)) {
       return res.status(400).send({ message: false, body: `category must be among ${noteCategory} ` });
     }
-    const data = { title: req.body.title, content: req.body.content, category: req.body.category };
+    const data = {
+      title: req.body.title, content: req.body.content, category: req.body.category, email: req.body.email
+    };
     await noteService.createNote(data);
     return res.status(201).send({ message: true, body: 'article posted successfully' });
   }
