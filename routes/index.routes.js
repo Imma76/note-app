@@ -4,7 +4,7 @@ import userRouter from './user.route.js';
 
 const router = express.Router();
 
-router.use('/note-app/notes', noteRouter);
-router.use('/note-app/user', userRouter);
+router.use('/note-app', noteRouter);
+router.use('/note-user', userRouter);
 
 export default router;
