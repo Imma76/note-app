@@ -1,10 +1,13 @@
 /* eslint-disable class-methods-use-this */
 import noteService from '../services/note.services.js';
 import noteCategory from '../utils/utils.js';
-
+import _ from 'lodash';
 class NoteController {
   async getAllNotes(req, res) {
-      const allNotes = await noteService.getNotes(req.params.email);
+    const allNotes = await noteService.getNotes(req.params.email);
+    if (_.isEmpty(allNotes)) {
+      return res.status(200).send({ message: true, body:'no notes found' });
+    }
     return res.status(200).send({ message: true, body: allNotes });
   }
 
