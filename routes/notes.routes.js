@@ -6,7 +6,7 @@ import authentication from '../middlewares/auth.middleware.js';
 
 const noteRouter = express.Router();
 
-noteRouter.get('/notes', [authentication], noteController.getAllNotes);
+noteRouter.get('/notes/:email', noteController.getAllNotes);
 
 noteRouter.post('/notes', [validator(noteValidator.validateNewNoteSchema)], noteController.postNewNote);
 

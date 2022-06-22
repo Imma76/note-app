@@ -4,7 +4,7 @@ import noteCategory from '../utils/utils.js';
 
 class NoteController {
   async getAllNotes(req, res) {
-      const allNotes = await noteService.getNotes();
+      const allNotes = await noteService.getNotes(req.params.email);
     return res.status(200).send({ message: true, body: allNotes });
   }
 

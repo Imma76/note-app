@@ -1,7 +1,7 @@
 import notes from '../models/note.model.js';
 
-const getNotes = async () => {
-  const allNotes = await notes.find({});
+const getNotes = async (email) => {
+  const allNotes = await notes.findOne({ email:email });
   return allNotes;
 };
 
