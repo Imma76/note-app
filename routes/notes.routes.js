@@ -7,8 +7,8 @@ const noteRouter = express.Router();
 
 noteRouter.get('/notes', noteController.getAllNotes);
 
-noteRouter.post('/notes', [validator(noteValidator.validateNewNoteSchema)],  noteController.postNewNote);
+noteRouter.post('/notes', [validator(noteValidator.validateNewNoteSchema)], noteController.postNewNote);
 
 noteRouter.put('/notes', [validator(noteValidator.updateNoteSchema)], noteController.updateNote);
-noteRouter.delete('/notes',[validator(noteValidator.deleteNoteSchema)],  noteController.deleteNote);
+noteRouter.delete('/notes', [validator(noteValidator.deleteNoteSchema)], noteController.deleteNote);
 export default noteRouter;
