@@ -18,9 +18,11 @@ class NoteController {
   }
 
   async postNewNote(req, res) {
-    if (!noteCategory.includes(req.body.category)) {
-      return res.status(400).send({ message: false, body: `category must be among ${noteCategory} ` });
-    }
+    // if (!noteCategory.includes(req.body.category)) {
+    //   return res.status(400).send({ message: false, 
+    //body: `category must be among ${noteCategory} `
+ // });
+    // }
     const data = {
       title: req.body.title,
       content: req.body.content,

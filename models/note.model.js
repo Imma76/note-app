@@ -1,9 +1,15 @@
+
 import mongoose from 'mongoose';
 
 const noteModel = mongoose.Schema({
   category: {
+    type: String,
     required: true,
-    type: String
+    enum: {
+      values: ['sports', 'fashion', 'nature', 'religion', 'technology'],
+      message: `category must one of these ['sports',
+        'fashion', 'nature', 'religion', 'technology']`
+    }
   },
   title: {
 
