@@ -1,14 +1,19 @@
 /* eslint-disable class-methods-use-this */
 import _ from 'lodash';
+import pino from 'pino';
 import noteService from '../services/note.services.js';
 import noteCategory from '../utils/utils.js';
 
+const logger = pino();
 class NoteController {
   async getAllNotes(req, res) {
     const allNotes = await noteService.getNotes(req.params.email);
     if (_.isEmpty(allNotes)) {
+      logger.error(allNotes);
       return res.status(200).send({ message: true, body: 'no notes found' });
     }
+
+    logger.info(allNotes);
     return res.status(200).send({ message: true, body: allNotes });
   }
 
@@ -34,7 +39,7 @@ class NoteController {
 
   async deleteNote(req, res) {
     const deleted = await noteService.deleteNote(req.body.id);
-    console.log(deleted);
+    logger.info(deleted);
     return res.status(200).send({ message: true, body: 'note deleted succesfully' });
   }
 }
