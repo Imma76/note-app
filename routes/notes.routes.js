@@ -11,6 +11,6 @@ noteRouter.get('/notes/:email', authentication, noteController.getAllNotes);
 noteRouter.get('/notes',  noteController.getAllNotes1);
 noteRouter.post('/notes', [validator(noteValidator.validateNewNoteSchema),authentication], noteController.postNewNote);
 
-noteRouter.put('/notes', [validator(noteValidator.updateNoteSchema, authentication)], noteController.updateNote);
+noteRouter.put('/notes', [validator(noteValidator.updateNoteSchema, ),authentication], noteController.updateNote);
 noteRouter.delete('/notes', [validator(noteValidator.deleteNoteSchema, authentication)], noteController.deleteNote);
 export default noteRouter;
