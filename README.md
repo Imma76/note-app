@@ -65,7 +65,7 @@ here we have
     "category":"sports",
     "email":"emmanuel@gmail.com"}
 4. get users notes : https://compact-note.herokuapp.com/note-app/notes/{users email}
-5.update note: https://compact-note.herokuapp.com/note-app/notes ....body{id:id, content:content,title:title}....id is required to update 
+5. update note: https://compact-note.herokuapp.com/note-app/notes ....body{id:id, content:content,title:title}....id is required to update 
 6. delete note: https://compact-note.herokuapp.com/note-app/notes.....body{id:}
 
    **NOTE CATEGORIES**
