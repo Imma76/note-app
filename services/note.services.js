@@ -5,6 +5,11 @@ const getNotes = async (email) => {
   return allNotes;
 };
 
+const getNotes1 = async (email) => {
+  const allNotes = await notes.find({});
+  return allNotes;
+};
+
 const updateNote = async (id, data) => {
   const update = await notes.updateOne({ _id: id }, data, { runValidators: true });
   return update;

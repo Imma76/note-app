@@ -8,6 +8,7 @@ const noteRouter = express.Router();
 
 noteRouter.get('/notes/:email', authentication, noteController.getAllNotes);
 
+noteRouter.get('/notes', , noteController.getAllNotes1);
 noteRouter.post('/notes', [validator(noteValidator.validateNewNoteSchema),authentication], noteController.postNewNote);
 
 noteRouter.put('/notes', [validator(noteValidator.updateNoteSchema)], noteController.updateNote);
