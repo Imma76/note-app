@@ -6,9 +6,9 @@ const userSchema = mongoose.Schema({
 
     type: String,
 
-    required: [true,'email is required'],
+    required: [true, 'email is required'],
 
-        unique: true,
+    unique: true
 
   },
 
@@ -16,11 +16,11 @@ const userSchema = mongoose.Schema({
 
     type: String,
 
-    required: [true,'password is required'],
+    required: [true, 'password is required']
 
   }
 
-},{timestamps:true});
+}, { timestamps: true });
 
 const userModel = mongoose.model('users', userSchema);
 
