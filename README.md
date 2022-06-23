@@ -60,8 +60,8 @@ here we have
 **endpoints examples**
 **note** authorization tokens must be passed to request headers to create a note,get a note, update a note and delete a note.
 auth tokens are gotten from login response.
-1. create new user: https://compact-note.herokuapp.com/note-app/create .....body{email:email,password:password}
-2. login user : https://compact-note.herokuapp.com/note-app/login .....body{email:email,password:password}
+1. create new user: https://compact-note.herokuapp.com/note-app/users .....body{email:email,password:password}
+2. login user : https://compact-note.herokuapp.com/note-app/users/login .....body{email:email,password:password}
 3. create note: https://compact-note.herokuapp.com/note-app/notes .....body{"title":"things fall apart",
     "content":"things will always fall apart",
     "category":"sports",
