@@ -17,7 +17,6 @@ class NoteController {
   }
 
   async postNewNote(req, res) {
-  
     const data = {
       title: req.body.title,
       content: req.body.content,
