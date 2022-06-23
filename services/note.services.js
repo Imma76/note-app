@@ -12,7 +12,7 @@ const updateNote = async (id, data) => {
 
 const createNote = async (note) => {
   const create = await notes.create(note);
-  console.log(`${create} bbbbbbbbb`);
+  
   return create;
 };
 
