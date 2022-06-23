@@ -5,7 +5,7 @@ const getNotes = async (email) => {
   return allNotes;
 };
 
-const getNotes1 = async (email) => {
+const getNotes1 = async () => {
   const allNotes = await notes.find({});
   return allNotes;
 };
@@ -30,5 +30,6 @@ export default {
   getNotes,
   createNote,
   deleteNote,
-  updateNote
+  updateNote,
+  getNotes1
 };

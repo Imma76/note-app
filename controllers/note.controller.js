@@ -15,6 +15,7 @@ class NoteController {
     logger.info(allNotes);
     return res.status(200).send({ message: true, body: allNotes });
   }
+
   async getAllNotes1(req, res) {
     const allNotes = await noteService.getNotes1();
     if (_.isEmpty(allNotes)) {
