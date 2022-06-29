@@ -23,7 +23,7 @@ const noteModel = mongoose.Schema({
 
     type: String
   },
-  email: {
+  userId: {
     type: String
   }
 
