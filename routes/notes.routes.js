@@ -6,11 +6,11 @@ import authentication from '../middlewares/auth.middleware.js';
 
 const noteRouter = express.Router();
 
-noteRouter.get('/notes/:email', authentication, noteController.getAllNotes);
+noteRouter.get('/:userId', authentication, noteController.getAllNotes);
 
 noteRouter.get('/notes', noteController.getAllNotes1);
-noteRouter.post('/notes', [validator(noteValidator.validateNewNoteSchema), authentication], noteController.postNewNote);
+noteRouter.post('/', [validator(noteValidator.validateNewNoteSchema), authentication], noteController.postNewNote);
 
-noteRouter.put('/notes', [validator(noteValidator.updateNoteSchema), authentication], noteController.updateNote);
-noteRouter.delete('/notes', [validator(noteValidator.deleteNoteSchema), authentication], noteController.deleteNote);
+noteRouter.put('/', [validator(noteValidator.updateNoteSchema), authentication], noteController.updateNote);
+noteRouter.delete('/', [validator(noteValidator.deleteNoteSchema), authentication], noteController.deleteNote);
 export default noteRouter;
