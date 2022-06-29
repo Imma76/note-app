@@ -57,34 +57,4 @@ here we have
     | -- holds the various middlwares used in the note app like error handling,connecting the app to db
     
 
-**endpoints examples**
-**note** authorization tokens must be passed to request headers to create a note,get a note, update a note and delete a note.
-auth tokens are gotten from login response.
-1. create new user: https://compact-note.herokuapp.com/note-app/users .....body{email:email,password:password}
-2. login user : https://compact-note.herokuapp.com/note-app/users/login .....body{email:email,password:password}
-3. create note: https://compact-note.herokuapp.com/note-app/notes .....body{"title":"things fall apart",
-    "content":"things will always fall apart",
-    "category":"sports",
-    "email":"emmanuel@gmail.com"}
-4. get users notes : https://compact-note.herokuapp.com/note-app/notes/{users email}
-5. update note: https://compact-note.herokuapp.com/note-app/notes ....body{id:id, content:content,title:title}....id is required to update 
-6. delete note: https://compact-note.herokuapp.com/note-app/notes.....body{id:}
-
-   **NOTE CATEGORIES**
-    
-    Note 
-    
-    1. that you cannot create a new note without tagging it to an existing category
-    2. trying to create a new note with a category that does not exist in the list of categories will return error response
-    3. note category must be one of these 
-    
-    sports⚽️,
-    
-    fashion🕺,
-    
-    nature☘️,
-    
-    religion📔,
-    
-    technology🛸
-    
+api documentation: https://documenter.getpostman.com/view/17577991/UzBsHQ6z
