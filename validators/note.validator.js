@@ -5,7 +5,7 @@ class NoteValidator {
     title: Joi.string().required(),
     content: Joi.string().required(),
     category: Joi.string().required(),
-    email: Joi.string().required(),
+    userId: Joi.string().required()
   });
 
   updateNoteSchema = Joi.object({
