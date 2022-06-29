@@ -6,7 +6,7 @@ import noteService from '../services/note.services.js';
 const logger = pino();
 class NoteController {
   async getAllNotes(req, res) {
-    const allNotes = await noteService.getNotes(req.params.email);
+    const allNotes = await noteService.getNotes(req.params.userId);
     if (_.isEmpty(allNotes)) {
       logger.error(allNotes);
       return res.status(200).send({ message: true, count: allNotes.length, body: 'no notes found' });
