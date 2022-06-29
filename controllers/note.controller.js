@@ -9,22 +9,20 @@ class NoteController {
     const allNotes = await noteService.getNotes(req.params.email);
     if (_.isEmpty(allNotes)) {
       logger.error(allNotes);
-      return res.status(200).send({ message: true,count:allNotes.length body: 'no notes found' });
+      return res.status(200).send({ message: true, count: allNotes.length, body: 'no notes found' });
     }
 
     logger.info(allNotes);
-    return res.status(200).send({ message: true,count:allNotes.length, body: allNotes });
+    return res.status(200).send({ message: true, count: allNotes.length, body: allNotes });
   }
 
   async getAllNotes1(req, res) {
     const allNotes = await noteService.getNotes1();
     if (_.isEmpty(allNotes)) {
-      
       return res.status(200).send({ message: true, body: 'no notes found' });
     }
 
-   
-    return res.status(200).send({ message: true,count: allNotes.length, body: allNotes });
+    return res.status(200).send({ message: true, count: allNotes.length, body: allNotes });
   }
 
   async postNewNote(req, res) {
