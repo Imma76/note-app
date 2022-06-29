@@ -36,7 +36,7 @@ class NoteController {
   }
 
   async updateNote(req, res) {
-    const data = { title: req.body.title, content: req.body.content, updatedAt: Date() };
+    const data = { title: req.body.title, content: req.body.content, };
     await noteService.updateNote(req.body.id, data);
     return res.status(201).send({ message: true, body: 'note updated successfully' });
   }
