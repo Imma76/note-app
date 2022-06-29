@@ -30,8 +30,7 @@ class NoteController {
       title: req.body.title,
       content: req.body.content,
       category: req.body.category,
-      email: req.body.email
-    };
+      userId :req.body.userId    };
     await noteService.createNote(data);
     return res.status(201).send({ message: true, body: 'article posted successfully' });
   }
