@@ -1,7 +1,9 @@
 /* eslint-disable class-methods-use-this */
 import _ from 'lodash';
-import pino from 'pino';
+import pino, { destination } from 'pino';
+import multer from 'multer';
 import noteService from '../services/note.services.js';
+
 
 const logger = pino();
 class NoteController {
@@ -26,17 +28,21 @@ class NoteController {
   }
 
   async postNewNote(req, res) {
+    logger.info(req.file);
+    console.log(req.file);
     const data = {
       title: req.body.title,
       content: req.body.content,
       category: req.body.category,
-      userId :req.body.userId    };
+      userId: req.user._id,
+      noteImage:req.file.path,
+    };
     await noteService.createNote(data);
     return res.status(201).send({ message: true, body: 'article posted successfully' });
   }
 
   async updateNote(req, res) {
-    const data = { title: req.body.title, content: req.body.content, };
+    const data = { title: req.body.title, content: req.body.content };
     await noteService.updateNote(req.body.id, data);
     return res.status(201).send({ message: true, body: 'note updated successfully' });
   }

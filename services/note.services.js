@@ -7,6 +7,7 @@ const getNotes = async (id) => {
 
 const getNotes1 = async () => {
   const allNotes = await notes.find({});
+  console.log(allNotes);
   return allNotes;
 };
 

@@ -20,8 +20,7 @@ class UserController {
     if (!verifyPassword) {
       return res.status(404).send({ success: false, message: 'email or password is invalid' });
     }
-
-    const token = jwt.sign({ user }, process.env.TOKEN_SECRET);
+    const token = jwt.sign({ _id: user._id, email: user.email }, process.env.TOKEN_SECRET, { expiresIn: '23hrs', algorithm: 'HS512' });
     return res.status(200).send({
       success: true,
       body: {

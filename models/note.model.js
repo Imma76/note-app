@@ -24,6 +24,9 @@ const noteModel = mongoose.Schema({
   },
   userId: {
     type: String
+  },
+  noteImage: {
+    type: String
   }
 
 }, { timestamps: true });
