@@ -5,22 +5,21 @@ import validator from '../validators/validator.js';
 import noteValidator from '../validators/note.validator.js';
 import authentication from '../middlewares/auth.middleware.js';
 
-const storage = multer.diskStorage({
-  destination: function(req, file, cb) {
-    cb(null, 'uploads/');
-  },
-  filename: (req, file, cb) => {
-    cb(null, file.originalname);
-  }
-});
-const upload = multer({ storage :storage});
-
-const noteRouter = express.Router();
+// const storage = multer.diskStorage({
+//   destination: function(req, file, cb) {
+//     cb(null, 'uploads/');
+//   },
+//   filename: (req, file, cb) => {
+//     cb(null, file.originalname);
+//   }
+// });
+// const upload = multer({ storage :storage});
+ const noteRouter = express.Router();
 
 noteRouter.get('/:userId', authentication, noteController.getAllNotes);
 
 noteRouter.get('/notes', noteController.getAllNotes1);
-noteRouter.post('/', upload.single('noteImage'), [validator(noteValidator.validateNewNoteSchema), authentication], noteController.postNewNote);
+noteRouter.post('/',[validator(noteValidator.validateNewNoteSchema), authentication], noteController.postNewNote);
 
 noteRouter.put('/', [validator(noteValidator.updateNoteSchema), authentication], noteController.updateNote);
 noteRouter.delete('/', [validator(noteValidator.deleteNoteSchema), authentication], noteController.deleteNote);

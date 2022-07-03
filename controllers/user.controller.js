@@ -3,6 +3,7 @@ import _ from 'lodash';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import userController from '../services/user.service.js';
+import userService from '../services/user.service.js';
 
 class UserController {
   async createUser(req, res) {
@@ -28,6 +29,12 @@ class UserController {
         data: { email: user.email, token }
       }
     });
+  }
+
+  async fetchUsers(req, res) {
+    const users = await userService.fetchUsers();
+    console.log(users);
+    return res.status(200).send({ status: true, body: { ...users } });
   }
 }
 

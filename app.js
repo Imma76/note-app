@@ -12,5 +12,5 @@ middleware(app);
 const PORT = process.env.PORT || 5011;
 
 app.listen(PORT, () => {
-  console.log('port listening on port 5011');
+  console.log(`port listening on port ${PORT}`);
 });

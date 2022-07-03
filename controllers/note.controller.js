@@ -20,6 +20,7 @@ class NoteController {
 
   async getAllNotes1(req, res) {
     const allNotes = await noteService.getNotes1();
+    
     if (_.isEmpty(allNotes)) {
       return res.status(200).send({ message: true, body: 'no notes found' });
     }
@@ -53,5 +54,5 @@ class NoteController {
     return res.status(200).send({ message: true, body: 'note deleted succesfully' });
   }
 }
-
+7
 export default new NoteController();
